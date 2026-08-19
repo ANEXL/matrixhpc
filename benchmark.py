@@ -136,6 +136,7 @@ def main():
             print(f"Executable nicht gefunden: {executable}")
             continue
 
+        print()
         print(f"Benchmarking {name} ...")
 
         times = benchmark(command)
