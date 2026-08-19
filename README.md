@@ -15,10 +15,6 @@ Benchmark Runs: 10
 A gespeichert: data/A.bin
 B gespeichert: data/B.bin
 
-Benchmarking naive ...
-
-naive
-----------------------------------------
 Median:       2.839265 s
 Minimum:      2.798730 s
 Mittelwert:   2.884498 s
