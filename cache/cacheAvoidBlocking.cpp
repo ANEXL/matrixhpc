@@ -49,6 +49,7 @@ int main(int argc, char* argv[])
 float* matmul(const float* A, const float* B, float* C, size_t N)
 {
     constexpr size_t block_size = 48;
+    fill(C, C + N * N, 0.0f);
 
     for (size_t ii = 0; ii < N; ii += block_size) {
         for (size_t kk = 0; kk < N; kk += block_size) {
