@@ -7,7 +7,7 @@ The benchmark script creates two matrices with a given Problemsize N², outputs 
 
 ## Results
 
-Benchmarked on 19.Aug.26
+Benchmarked on 20.Aug.26
 ```
 ============================================================
 Matrix Multiplication Benchmark
@@ -24,10 +24,10 @@ Benchmarking naive ...
 
 naive
 ----------------------------------------
-Median:       2.802030 s
-Minimum:      2.749730 s
-Mittelwert:   2.810772 s
-Std. Abw.:    0.055323 s
+Median:       2.785080 s
+Minimum:      2.764790 s
+Mittelwert:   2.801623 s
+Std. Abw.:    0.033812 s
 Median:       0.77 GFLOP/s
 Maximum:      0.78 GFLOP/s
 
@@ -35,21 +35,21 @@ Benchmarking cache_avoid_turns ...
 
 cache_avoid_turns
 ----------------------------------------
-Median:       0.404657 s
-Minimum:      0.388602 s
-Mittelwert:   0.410847 s
-Std. Abw.:    0.023941 s
-Median:       5.31 GFLOP/s
-Maximum:      5.53 GFLOP/s
+Median:       0.447667 s
+Minimum:      0.387280 s
+Mittelwert:   0.426507 s
+Std. Abw.:    0.031894 s
+Median:       4.80 GFLOP/s
+Maximum:      5.55 GFLOP/s
 
 Benchmarking cache_avoid_transp ...
 
 cache_avoid_transp
 ----------------------------------------
-Median:       0.566099 s
-Minimum:      0.560622 s
-Mittelwert:   0.566845 s
-Std. Abw.:    0.003509 s
-Median:       3.79 GFLOP/s
-Maximum:      3.83 GFLOP/s
+Median:       0.561809 s
+Minimum:      0.559867 s
+Mittelwert:   0.565054 s
+Std. Abw.:    0.006213 s
+Median:       3.82 GFLOP/s
+Maximum:      3.84 GFLOP/s
 ```

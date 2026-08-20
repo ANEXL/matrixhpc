@@ -5,10 +5,10 @@
 #include <cstdlib>
 using namespace std;
 
-float* matmul(const float* A, const float* B, float* C, size_t N);
+float* matmul(const float* A, const float* B, float* B_transposed, float* C, size_t N);
 void read_matrix(const char* filename, float* matrix, size_t elements);
 
-//Program to multiply two matrices the trivial way
+//Program to multiply two matrices but the second matrix is transposed to avoid cache misses
 int main(int argc, char* argv[])
 {
     // Default matrix size and file names
@@ -26,6 +26,7 @@ int main(int argc, char* argv[])
     // Allocate memory for matrices A, B and C
     float* A = new float[elements];
     float* B = new float[elements];
+    float* B_transposed = new float[elements]; // Allocate memory for the transposed matrix B
     float* C = new float[elements];
 
     // Read matrices from binary files
@@ -34,7 +35,7 @@ int main(int argc, char* argv[])
     
     // Measure the time taken for matrix multiplication
     auto start = std::chrono::steady_clock::now();
-    matmul(A, B, C, N);
+    matmul(A, B, B_transposed, C, N);
     auto end = std::chrono::steady_clock::now();
 
     // Calculate the duration in seconds
@@ -44,15 +45,14 @@ int main(int argc, char* argv[])
     return 0;
 }
 
-float* matmul(const float* A, const float* B, float* C, size_t N)
+float* matmul(const float* A, const float* B, float* B_transposed, float* C, size_t N)
 {
     // Transpose matrix B to improve cache performance
-    float* B_transposed = new float[N * N];
     for (size_t i = 0; i < N; ++i) {
         for (size_t j = 0; j < N; ++j) {
             B_transposed[j * N + i] = B[i * N + j];
         }
-    } 
+    }
 
     // Perform matrix multiplication with the transposed matrix
     for (size_t i = 0; i < N; ++i) {

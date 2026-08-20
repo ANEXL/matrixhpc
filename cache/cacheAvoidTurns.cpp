@@ -8,7 +8,7 @@ using namespace std;
 float* matmul(const float* A, const float* B, float* C, size_t N);
 void read_matrix(const char* filename, float* matrix, size_t elements);
 
-//Program to multiply two matrices the trivial way but with a different loop order to avoid cache misses
+//Program to multiply two matrices but with a different loop order to avoid cache misses
 int main(int argc, char* argv[])
 {
     // Default matrix size and file names
