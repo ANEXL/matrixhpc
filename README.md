@@ -26,32 +26,44 @@ Benchmarking naive ...
 
 naive
 ----------------------------------------
-Median:       2.785080 s
-Minimum:      2.764790 s
-Mittelwert:   2.801623 s
-Std. Abw.:    0.033812 s
-Median:       0.77 GFLOP/s
-Maximum:      0.78 GFLOP/s
+Median:       2.879805 s
+Minimum:      2.812060 s
+Mean:         2.901057 s
+Std. dev.:    0.080647 s
+Median:       0.75 GFLOP/s
+Maximum:      0.76 GFLOP/s
 
 Benchmarking cache_avoid_turns ...
 
 cache_avoid_turns
 ----------------------------------------
-Median:       0.447667 s
-Minimum:      0.387280 s
-Mittelwert:   0.426507 s
-Std. Abw.:    0.031894 s
-Median:       4.80 GFLOP/s
-Maximum:      5.55 GFLOP/s
+Median:       0.398077 s
+Minimum:      0.390901 s
+Mean:         0.400001 s
+Std. dev.:    0.009636 s
+Median:       5.39 GFLOP/s
+Maximum:      5.49 GFLOP/s
 
 Benchmarking cache_avoid_transp ...
 
 cache_avoid_transp
 ----------------------------------------
-Median:       0.561809 s
-Minimum:      0.559867 s
-Mittelwert:   0.565054 s
-Std. Abw.:    0.006213 s
-Median:       3.82 GFLOP/s
-Maximum:      3.84 GFLOP/s
+Median:       0.576965 s
+Minimum:      0.565996 s
+Mean:         0.585806 s
+Std. dev.:    0.020581 s
+Median:       3.72 GFLOP/s
+Maximum:      3.79 GFLOP/s
+
+Benchmarking cache_avoid_blocking ...
+
+cache_avoid_blocking
+----------------------------------------
+Median:       0.465230 s
+Minimum:      0.461117 s
+Mean:         0.466171 s
+Std. dev.:    0.004337 s
+Median:       4.62 GFLOP/s
+Maximum:      4.66 GFLOP/s
+
 ```

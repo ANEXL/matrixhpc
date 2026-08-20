@@ -18,6 +18,7 @@ IMPLEMENTATIONS = {
     "naive": ["./naive/matrixhpcdummy"],
     "cache_avoid_turns": ["./cache/cacheAvoidTurns"],
     "cache_avoid_transp": ["./cache/cacheAvoidTransp"],
+    "cache_avoid_blocking": ["./cache/cacheAvoidBlocking"]
     # Later:
     # "mpi": ["mpirun", "-np", "4", "./mpi/matmul"],
 }
