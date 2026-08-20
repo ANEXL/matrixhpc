@@ -18,7 +18,7 @@ IMPLEMENTATIONS = {
     "naive": ["./naive/matrixhpcdummy"],
     "cache_avoid_turns": ["./cache/cacheAvoidTurns"],
     "cache_avoid_transp": ["./cache/cacheAvoidTransp"],
-    # Später:
+    # Later:
     # "mpi": ["mpirun", "-np", "4", "./mpi/matmul"],
 }
 
@@ -39,8 +39,8 @@ def save_matrices(A, B):
     A.tofile(A_FILE)
     B.tofile(B_FILE)
 
-    print(f"A gespeichert: {A_FILE}")
-    print(f"B gespeichert: {B_FILE}")
+    print(f"A saved: {A_FILE}")
+    print(f"B saved: {B_FILE}")
 
 # benchmarking function
 def benchmark(command):
@@ -67,7 +67,7 @@ def benchmark(command):
             check=True
         )
 
-        # Programm muss z.B. ausgeben:
+        # Programm has to output the time in seconds in the following format:
         #
         # TIME 0.123456
         #
@@ -84,9 +84,10 @@ def benchmark(command):
 
     return times
 
-# Ergebnisse
+# Results printing function
 def print_results(name, times):
 
+    # Calculate statistics
     median = np.median(times)
     minimum = np.min(times)
     mean = np.mean(times)
@@ -103,8 +104,8 @@ def print_results(name, times):
 
     print(f"Median:       {median:.6f} s")
     print(f"Minimum:      {minimum:.6f} s")
-    print(f"Mittelwert:   {mean:.6f} s")
-    print(f"Std. Abw.:    {std:.6f} s")
+    print(f"Mean:         {mean:.6f} s")
+    print(f"Std. dev.:    {std:.6f} s")
 
     print(f"Median:       {median_gflops:.2f} GFLOP/s")
     print(f"Maximum:      {max_gflops:.2f} GFLOP/s")
@@ -120,21 +121,21 @@ def main():
     print(f"Warmup Runs:    {WARMUP_RUNS}")
     print(f"Benchmark Runs: {RUNS}")
 
-    # Matrizen einmal erzeugen
+    # generate matrices and save them to files
     A, B = generate_matrices(N, SEED)
 
     save_matrices(A, B)
 
     print()
 
-    # Implementierungen testen
+    # benchmark each implementation
     for name, command in IMPLEMENTATIONS.items():
 
         executable = command[-1]
 
         if not os.path.exists(executable):
-            print(f"{name}: Übersprungen")
-            print(f"Executable nicht gefunden: {executable}")
+            print(f"{name}: skipped")
+            print(f"Executable not found: {executable}")
             continue
 
         print()

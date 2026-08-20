@@ -3,7 +3,9 @@ Collection of scripts in order to learn optimization in python and cpp at the ex
 I want to improve in analysing code in terms of runtime, storage and ressource management while also develop skills in cpp as well as other HPC related languages such as CUDA, OpenMP and MPI.
 
 ## Benchmarking
-The benchmark script creates two matrices with a given Problemsize N², outputs them as binarys to the ./data folder and runs all linkes executables with a given number of warm-up and measurment runs.  
+The benchmark script creates two matrices with a given Problemsize N², outputs them as binarys to the ./data folder and runs all linkes executables with a given number of warm-up and measurment runs.
+The output is the calculation time (med,min,max,std.dev,...) and the GFLOPS/s calculated with the following formula:
+$\frac{2 \cdot N^{3}}{t_{med|max} \cdot 10^{9}}$
 
 ## Results
 
@@ -16,8 +18,8 @@ N:              1024
 Seed:           42
 Warmup Runs:    3
 Benchmark Runs: 10
-A gespeichert: data/A.bin
-B gespeichert: data/B.bin
+A saved: data/A.bin
+B saved: data/B.bin
 
 
 Benchmarking naive ...
