@@ -1,6 +1,9 @@
 # matrixhpc
 Collection of scripts in order to learn optimization in python and cpp at the example of matrix multiplication.
-I want to improve in analysing code in terms of runtime, storage and ressource management and also develop skills in cpp and other HPC related languages such as CUDA, OpenMP, MPI und weitere.
+I want to improve in analysing code in terms of runtime, storage and ressource management while also develop skills in cpp as well as other HPC related languages such as CUDA, OpenMP and MPI.
+
+## Benchmarking
+The benchmark script creates two matrices with a given Problemsize N², outputs them as binarys to the ./data folder and runs all linkes executables with a given number of warm-up and measurment runs.  
 
 ## Results
 

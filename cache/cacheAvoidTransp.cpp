@@ -52,7 +52,7 @@ float* matmul(const float* A, const float* B, float* C, size_t N)
         for (size_t j = 0; j < N; ++j) {
             B_transposed[j * N + i] = B[i * N + j];
         }
-    }
+    } 
 
     // Perform matrix multiplication with the transposed matrix
     for (size_t i = 0; i < N; ++i) {
