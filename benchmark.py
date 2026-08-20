@@ -17,6 +17,7 @@ B_FILE = f"{DATA_DIR}/B.bin"
 IMPLEMENTATIONS = {
     "naive": ["./naive/matrixhpcdummy"],
     "cache_avoid_turns": ["./cache/cacheAvoidTurns"],
+    "cache_avoid_transp": ["./cache/cacheAvoidTransp"],
     # Später:
     # "mpi": ["mpirun", "-np", "4", "./mpi/matmul"],
 }
